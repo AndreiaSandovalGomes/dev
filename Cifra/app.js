@@ -1,27 +1,17 @@
 
-
-
-function cipher(){
-  var string = prompt('Digite sua palavra');
-  // var string = promptWord.split('');
-  var newString = '';
-  var res;
-  for (i= 0; i < string.length; i++){
-    res = string.charCodeAt(i);
-    console.log(res);
-//     res =
-//
-//
-//     if (res >= 65 && res <=  90) {newStrings  = String.fromCharCode((res - 65 + 7) % 26 + 65);  // Uppercase
-//     }else if (res >= 97 && res <= 122) { newStrings = String.fromCharCode((res - 97 + 7) % 26 + 97);// Lowercase
-//     }
-  }
-// return newString;
+var word = prompt('Digite sua palavra');
+var cifra = word;
+function cipher() {
+  var result = ''
+  var firstCharIdx = 'A'.charCodeAt(0);
+  var offSet = ('z'.charCodeAt(0) - 'A'.charCodeAt(0))+1
+    for (var i = 0; i < cifra.length; i ++) {
+      var oldCharIdx = cifra[i].charCodeAt(0);
+      var oldIdxInAlpha = oldCharIdx - firstCharIdx;
+      var nwIdxInAlpha = (oldIdxInAlpha + 7) % offSet;
+      var newChar = String.fromCharCode(firstCharIdx + nwIdxInAlpha);
+      result += newChar;
+    }
+   return document.write('Palavra criptografa: ' + result);
 }
-cipher();
-// function bicho(){
-//   console.log('gato');
-//   var hamister = 2;
-//   return hamister
-// }
-// bicho();
+ cipher();

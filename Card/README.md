@@ -1,0 +1,10 @@
+PASSOS DO DESENVOLVIMENTO;
+1- Criado HTML vinculado ao app.js;
+2- Criado um prompt solicitando ao cliente o numero do cartao;
+3- Criado um alerta caso o cliente nao preencha o numero corretamente ou deixe em branco;
+4- Criado um array chamado arr separando por virgula os numeros digitados e invertendo a ordem dos mesmos;
+5- Criado um novo array chamado evenIndex de numeros com indices pares, excluindo o indice zero para que inicie no segundo item o unshift;
+6- Multiplicado por dois cada item condicionando os iguais ou superiores a zero serem subtraidos por 9 apresentando um novo valor para cada item;
+7- Criado um outro array chamado oddIndex de numeros com indices impares para soma-los;
+8- Somado os arrays arr[0] + evenIndex + oddIndex;
+9- O resultado da soma sera % 10 e se for true, retornará uma mensagem no HTML que o cartão é valido, caso contrario, a mensagem será que o cartão é invalido;
